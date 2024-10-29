@@ -75,11 +75,15 @@ fun DataStoreDemo(modifier: Modifier) {
         Button(onClick = {
             coroutineScope.launch {
                 store.saveUsername("flygirl")
+                store.saveHighScore(1000)
+                store.saveDakMode(true)
             }
 
         }) {
             Text("Save Values")
         }
+
+
     }
 }
 
